@@ -1,10 +1,10 @@
 {
-  "name": "spring-easing",
-  "version": "2.3.0",
+  "name": "postcss-spring-easing",
+  "version": "0.0.0",
   "type": "module",
   "sideEffects": false,
-  "description": "Quick and easy spring animations. Works with other animation libraries (animejs, framer motion, motion one, @okikio/animate, etc...) or the Web Animation API (WAAPI).",
-  "umd": "SpringEasing",
+  "description": "PostCSS plugin to replace spring() with a linear() easing function",
+  "umd": "PostcssSpringEasing",
   "access": "public",
   "legacy": "lib/index.js",
   "main": "lib/index.cjs",
@@ -30,39 +30,14 @@
     "src"
   ],
   "scripts": {
-    "typedoc": "esbuild ./.typedoc/typedoc.tsx --format=cjs --outfile=./.typedoc/typedoc.cjs && typedoc && esno ./.typedoc/rehype.ts",
-    "preview": "vite docs",
-    "start": "vite docs",
-    "fixtures": "vite tests/fixture",
     "test": "vitest",
     "test:run": "vitest run",
-    "repl": "esno repl.ts",
     "build": "vite build",
-    "pre-release": "pnpm test:run && pnpm build && pnpm typedoc",
+    "pre-release": "pnpm test:run && pnpm build",
     "semantic-release": "semantic-release"
   },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "lib/**"
-          ]
-        }
-      ],
-      "@semantic-release/git",
-      "@semantic-release/npm"
-    ]
-  },
   "changelog": {
-    "repo": "spring-easing",
+    "repo": "postcss-spring-easing",
     "labels": {
       "breaking": ":boom: Breaking Change",
       "enhancement": ":rocket: Enhancement",
@@ -80,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/okikio/spring-easing.git"
+    "url": "https://github.com/okikio/postcss-spring-easing.git"
   },
   "keywords": [
     "spring-easing",
@@ -88,13 +63,10 @@
     "animation",
     "easing",
     "spring",
-    "framer-motion",
-    "motion-one",
-    "@okikio/animate",
-    "Web-Animation-API",
-    "WAAPI",
+    "postcss",
+    "css",
+    "postcss-plugin",
     "linear-easing",
-    "css-spring-easing",
     "custom-easing"
   ],
   "author": {
@@ -104,37 +76,33 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/okikio/spring-easing/issues"
+    "url": "https://github.com/okikio/postcss-spring-easing/issues"
   },
-  "homepage": "https://spring-easing.okikio.dev",
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20.1.4",
-    "@types/web": "^0.0.99",
-    "esbuild": "^0.17.19",
-    "esno": "^0.16.3",
-    "fast-glob": "^3.2.12",
-    "hastscript": "^7.2.0",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.3",
+    "@semantic-release/release-notes-generator": "^11.0.1",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "husky": "^8.0.3",
     "pnpm": "^8.5.0",
-    "rehype-accessible-emojis": "^0.3.2",
-    "rehype-external-links": "^2.1.0",
-    "rehype-parse": "^8.0.4",
-    "rehype-slug": "^5.1.0",
-    "rehype-stringify": "^9.0.3",
-    "rehype-urls": "^1.1.1",
+    "postcss": "^8.4.23",
     "semantic-release": "^21.0.2",
-    "typedoc": "^0.24.7",
-    "typedoc-plugin-extras": "^2.3.3",
-    "typedoc-plugin-inline-sources": "^1.0.1",
-    "typedoc-plugin-mdn-links": "^3.0.3",
     "typescript": "^5.0.4",
-    "unified": "^10.1.2",
     "vite": "^4.3.5",
     "vite-plugin-dts": "^2.3.0",
     "vitest": "^0.31.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.23",
+    "spring-easing": "^2.3.1"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0",
+    "spring-easing": "^2.3.1"
   }
 }
