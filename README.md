@@ -34,8 +34,7 @@ PostCSS plugin to replace `spring()` functions with a `linear()` easing function
 
 You can create animation's like this with `postcss-spring-easing`,
 
-<img src="media/assets/postcss-spring-easing-demo-video.gif" width="1920" loading="lazy" alt="A demo of the various postcss-spring-easings available" align="center" style="border-radius: 1rem; 
-    aspect-ratio: auto 1920 / 899;" />
+<img src="media/assets/spring-easing-demo-video.gif" width="1920" loading="lazy" alt="A demo of the various postcss-spring-easings available" align="center" style="border-radius: 1rem; aspect-ratio: auto 1920 / 899;" />
 
 
 <!-- https://github.com/okikio/postcss-spring-easing/assets/17222836/3813945f-b301-4399-8383-bbab227c3f68
