@@ -4,7 +4,7 @@
 
 <!-- ![](https://deno.bundlejs.com/badge?q=postcss-spring-easing) -->
 
-[NPM](https://www.npmjs.com/package/postcss-spring-easing) <span style="padding-inline: 1rem">|</span> [GitHub](https://github.com/okikio/postcss-spring-easing#readme) <span style="padding-inline: 1rem">|</span> [Docs](https://postcss-spring-easing.okikio.dev) <span style="padding-inline: 1rem">|</span> [Licence](./LICENSE)
+[NPM](https://www.npmjs.com/package/postcss-spring-easing) <span style="padding-inline: 1rem">|</span> [GitHub](https://github.com/okikio/postcss-spring-easing#readme) <span style="padding-inline: 1rem">|</span>  [Licence](./LICENSE)
 
 PostCSS plugin to replace `spring()` functions with a `linear()` easing function. Inspired by [postcss-easings](https://github.com/postcss/postcss-easings).
 
