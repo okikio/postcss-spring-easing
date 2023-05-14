@@ -7,7 +7,6 @@ on:
   push:
     branches: [main]
     paths:
-      - '.typedoc/**/*'
       - '*.ts'
       - '*.js'
       - '*.json'
@@ -18,10 +17,12 @@ on:
       - 'src/**/*'
       - 'media/**/*'
       - 'tests/**/*'
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
 
     strategy:
       matrix:
@@ -54,10 +55,9 @@ jobs:
       - name: Pre-Release
         run: pnpm pre-release
 
-      - name: Add lib, types and docs to Git
+      - name: Add lib, and types to Git
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          git add --force docs/
           git add --force lib/
 
       - name: Commit files
