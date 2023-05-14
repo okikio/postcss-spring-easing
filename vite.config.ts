@@ -11,6 +11,9 @@ export default defineConfig({
   build: {
     outDir: "lib",
     minify: false,
+    rollupOptions: {
+      external: ["postcss", "postcss-value-parser", "spring-easing"]
+    },
     lib: {
       entry: "src/index.ts",
       name,
