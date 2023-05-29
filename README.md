@@ -191,15 +191,15 @@ a {
 Allow to set custom easings:
 
 ```js
-    require('postcss-spring-easing').default({
-      easings: { 
-        bounceOut: t => {
-          let pow2, b = 4;
-          while (t < ((pow2 = Math.pow(2, --b)) - 1) / 11) { }
-          return 1 / Math.pow(4, 3 - b) - 7.5625 * Math.pow((pow2 * 3 - 2) / 22 - t, 2);
-        },
-      }
-    })
+require('postcss-spring-easing').default({
+  easings: { 
+    bounceOut: t => {
+      let pow2, b = 4;
+      while (t < ((pow2 = Math.pow(2, --b)) - 1) / 11) { }
+      return 1 / Math.pow(4, 3 - b) - 7.5625 * Math.pow((pow2 * 3 - 2) / 22 - t, 2);
+    },
+  }
+})
 ```
 
 The plugin will convert custom easing name between camelCase and snake-case.
