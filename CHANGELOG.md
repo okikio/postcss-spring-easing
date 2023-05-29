@@ -1,3 +1,22 @@
+## [1.0.1](https://github.com/okikio/postcss-spring-easing/compare/v1.0.0...v1.0.1) (2023-05-29)
+
+
+### Bug Fixes
+
+* remove export of * spring-easing ([9903992](https://github.com/okikio/postcss-spring-easing/commit/9903992e05b12713315ebd14a2b9ff8561642087))
+
+
+### Automation
+
+* fix release [skip ci] ([cbad172](https://github.com/okikio/postcss-spring-easing/commit/cbad17206d7de5634a5967af1d25f10f6b9c8683))
+
+
+### Misc
+
+* fix examples ([89f366d](https://github.com/okikio/postcss-spring-easing/commit/89f366d48a4f2be1876b8ac574b5317296081747))
+* **gh-bot:** :rocket: build types, api & library files ([1f3bca0](https://github.com/okikio/postcss-spring-easing/commit/1f3bca09302131e6ba3d2d9cd6fd56e19c6cd72e))
+* update deps ([4b6cc3c](https://github.com/okikio/postcss-spring-easing/commit/4b6cc3c82181406329eaca7d16d3abb603e271fb))
+
 ## 1.0.0 (2023-05-14)
 
 
