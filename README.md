@@ -70,9 +70,9 @@ pnpm install postcss-spring-easing
 ## Usage
 
 ```ts
-import { SpringEasing } from "postcss-spring-easing";
+import { springEasingPlugin } from "postcss-spring-easing";
 // or
-import SpringEasing from "postcss-spring-easing";
+import springEasingPlugin from "postcss-spring-easing";
 ```
 
 You can also use it directly through a script tag:
@@ -108,7 +108,7 @@ Add the plugin to plugins list:
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-spring-easing'),
++   require('postcss-spring-easing').default,
     require('autoprefixer')
   ]
 }
@@ -120,14 +120,14 @@ Or
 // dependencies
 var fs = require("fs")
 var postcss = require("postcss")
-var springEasing = require("postcss-spring-easing")
+var { springEasingPlugin } = require("postcss-spring-easing")
 
 // css to be processed
 var css = fs.readFileSync("input.css", "utf8")
 
 // process css
 var output = postcss()
-  .use(springEasing())
+  .use(springEasingPlugin())
   .process(css)
   .css
 ```
@@ -191,7 +191,7 @@ a {
 Allow to set custom easings:
 
 ```js
-    require('postcss-spring-easing')({
+    require('postcss-spring-easing').default({
       easings: { 
         bounceOut: t => {
           let pow2, b = 4;
