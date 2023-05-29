@@ -82,27 +82,27 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.1.0",
     "@semantic-release/npm": "^10.0.3",
-    "@semantic-release/release-notes-generator": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^11.0.2",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "husky": "^8.0.3",
-    "pnpm": "^8.5.0",
-    "postcss": "^8.4.23",
+    "pnpm": "^8.6.0",
     "semantic-release": "^21.0.2",
     "typescript": "^5.0.4",
-    "vite": "^4.3.5",
+    "vite": "^4.3.9",
     "vite-plugin-dts": "^2.3.0",
-    "vitest": "^0.31.0"
+    "vitest": "^0.31.1"
   },
   "peerDependencies": {
-    "postcss": "^8.4.23",
+    "postcss-value-parser": "^4.2.0",
     "spring-easing": "^2.3.1"
   },
   "dependencies": {
     "postcss-value-parser": "^4.2.0",
-    "spring-easing": "^2.3.1"
+    "postcss": "^8.4.24",
+    "spring-easing": "^2.3.3"
   }
 }
