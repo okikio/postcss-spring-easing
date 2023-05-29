@@ -5,8 +5,6 @@ import type { FunctionNode } from 'postcss-value-parser'
 import type { TypeCSSEasingOptions, TypeFrameFunction } from 'spring-easing'
 import type { PluginCreator } from 'postcss'
 
-export * from 'spring-easing'
-
 export function toSnake(str: string) {
   return str[0] + str.slice(1).replace(/[A-Z]/g, letter => {
     return '-' + letter.toLowerCase()
