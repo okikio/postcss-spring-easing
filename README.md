@@ -6,7 +6,12 @@
 
 [NPM](https://www.npmjs.com/package/postcss-spring-easing) <span style="padding-inline: 1rem">|</span> [GitHub](https://github.com/okikio/postcss-spring-easing#readme) <span style="padding-inline: 1rem">|</span>  [Licence](./LICENSE)
 
-PostCSS plugin to replace `spring()` functions with a `linear()` easing function. Inspired by [postcss-easings](https://github.com/postcss/postcss-easings).
+Want your CSS animations to bounce and boogie 🕺 ? You've come to the right place! 
+
+This PostCSS plugin gives your CSS the superpower to create "spring" animations, bringing your websites to life! Inspired by [postcss-easings](https://github.com/postcss/postcss-easings), it replaces `spring()` functions with a `linear()` easing function.
+
+
+Here's a glimpse of how you can use it in your CSS:
 
 ```css
 .snake {
@@ -16,6 +21,8 @@ PostCSS plugin to replace `spring()` functions with a `linear()` easing function
   transition: all var(--spring-duration) springOut;
 }
 ```
+
+And here's what it looks like once `postcss-spring-easing` works its magic:
 
 ```css
 .snake {
@@ -30,11 +37,16 @@ PostCSS plugin to replace `spring()` functions with a `linear()` easing function
 
 > _**Note**: all the easings [spring-easing](https://github.com/okikio/spring-easing) supports `postcss-spring-easing` supports as well._
 
+## Why use postcss-spring-easing? 🤔
+
+CSS is great for designing your websites, including adding animations. But there are certain animation types, like a "spring" animation (imagine a bouncy ball), which CSS alone can't pull off.
+
+> **Fun fact**: "spring" animations are how Apple is able to create smooth animations for the iPhone. 
+
+
 <!-- > You can also read the [blog post](https://blog.okikio.dev/postcss-spring-easing), created for it's launch. -->
 
-You can create animation's like this with `postcss-spring-easing`,
-
-<img src="media/assets/spring-easing-demo-video.gif" width="1920" loading="lazy" alt="A demo of the various postcss-spring-easings available" align="center" style="border-radius: 1rem; aspect-ratio: auto 1920 / 899;" />
+<img src="media/assets/spring-easing-demo-video.gif" width="1280" loading="lazy" alt="A demo of the various postcss-spring-easings available" align="center" style="border-radius: 1rem; aspect-ratio: auto 1280 / 920;" />
 
 
 <!-- https://github.com/okikio/postcss-spring-easing/assets/17222836/3813945f-b301-4399-8383-bbab227c3f68
@@ -43,7 +55,13 @@ You can create animation's like this with `postcss-spring-easing`,
   <source src="media/assets/postcss-spring-easing-demo-video.mp4" type="video/mp4">
 </video> -->
 
-> _Check out the spring easing variants on [Codepen](https://codepen.io/okikio/pen/MWEMEgJ)._
+> _Check out more examples on [Codepen](https://codepen.io/okikio/pen/MWEMEgJ)._
+
+`postcss-spring-easing` comes to your rescue! It's a plugin for PostCSS, which enhances the capabilities of your CSS. This plugin helps you craft spring animations effortlessly.
+
+In a nutshell, `postcss-spring-easing` is a simple and effective tool for creating bouncy animations with minimum fuss, making your web pages more dynamic and fun.
+
+Let's get coding! 🚀
 
 ## Installation
 
@@ -66,41 +84,28 @@ pnpm install postcss-spring-easing
 
 </details>
 
+## Setting up PostCSS
 
-## Usage
+To use this plugin, you need to have PostCSS set up in your project. If you haven't already, follow these steps:
 
-```ts
-import { springEasingPlugin } from "postcss-spring-easing";
-// or
-import springEasingPlugin from "postcss-spring-easing";
+First, install PostCSS:
+
+```bash
+npm install postcss
 ```
 
-You can also use it directly through a script tag:
+<details>
+  <summary>Others</summary>
 
-```html
-<script src="https://unpkg.com/postcss-spring-easing" type="module"></script>
-<script type="module">
-  // You can then use it like this
-  const { springEasingPlugin } = window.PostcssSpringEasing;
-</script>
+```bash
+yarn add postcss
 ```
 
-You can also use it via a CDN, e.g.
+or
 
-```ts
-import { springEasingPlugin } from "https://esm.run/postcss-spring-easing";
-// or
-import { springEasingPlugin } from "https://esm.sh/postcss-spring-easing";
-// or
-import { springEasingPlugin } from "https://unpkg.com/postcss-spring-easing";
-// or
-import { springEasingPlugin } from "https://cdn.skypack.dev/postcss-spring-easing";
-// or
-import { springEasingPlugin } from "https://deno.bundlejs.com/file?q=postcss-spring-easing";
-// or any number of other CDN's
+```bash
+pnpm install postcss
 ```
-
-## Setup
 
 Check your project for an existing PostCSS config: `postcss.config.js` in the project root,`"postcss"` section in the `package.json` or `postcss` in your bundle config.
 
@@ -132,6 +137,35 @@ var output = postcss()
   .css
 ```
 Checkout [tests](./tests/) for more examples.
+
+
+## Usage
+
+To create a spring animation, you just need to write your CSS transitions as usual, but replace the timing function with one of the following:
+
+* `spring`
+* `spring-in` 
+* `spring-out` 
+* `spring-in-out` 
+* `spring-out-in` 
+
+Each of these represents a different type of spring effect.
+
+For example:
+
+```css
+.box {
+  transition: transform 1s spring-out;
+}
+```
+
+This will give a spring effect to the transform transition of the `.box` element.
+
+The `spring-out` function here means that the animation will start slowly and end quickly, like a spring being released. Similarly, `spring-in` would start quickly and end slowly, and `spring-in-out` would start and end slowly with a quick middle, resembling the movement of a bouncing spring.
+
+Now your animations are ready to bounce!
+
+Have questions? Or just wanna talk--leave a message on [GitHub Discussions](https://github.com/okikio/postcss-spring-easing/discussions/1)
 
 ## Showcase
 
