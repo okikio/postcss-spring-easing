@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "sideEffects": false,
-  "description": "PostCSS plugin to replace spring() with a linear() easing function",
+  "description": "PostCSS plugin to add that bounce and boogie that only springs can bring",
   "umd": "PostcssSpringEasing",
   "access": "public",
   "legacy": "lib/index.js",
