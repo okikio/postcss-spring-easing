@@ -1,3 +1,18 @@
+## [1.0.2](https://github.com/okikio/postcss-spring-easing/compare/v1.0.1...v1.0.2) (2023-06-09)
+
+
+### Misc
+
+* fix spacing in code block [skip ci] ([0fbd723](https://github.com/okikio/postcss-spring-easing/commit/0fbd72357cf695ce199be067606f7e148a7b64be))
+* **gh-bot:** :rocket: build types, api & library files ([6c05cd1](https://github.com/okikio/postcss-spring-easing/commit/6c05cd143a887cd84ff3366f98dde7bfc6830967))
+* massive improvement in readability for docs ([e3be205](https://github.com/okikio/postcss-spring-easing/commit/e3be205bc07bf1de9a779b895d80fb1542b8455e))
+* update deps [skip ci] ([2be9536](https://github.com/okikio/postcss-spring-easing/commit/2be9536be9a359861a23615d5018c0347926d6d0))
+
+
+### Automation
+
+* fix github actions firing on gh actions push ([18bb8b3](https://github.com/okikio/postcss-spring-easing/commit/18bb8b302c4e747310050e4bdde023725c3323d9))
+
 ## [1.0.1](https://github.com/okikio/postcss-spring-easing/compare/v1.0.0...v1.0.1) (2023-05-29)
 
 
